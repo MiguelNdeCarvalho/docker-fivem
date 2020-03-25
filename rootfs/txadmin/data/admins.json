@@ -1,0 +1,9 @@
+[
+    {
+        "name": "username",
+        "password_hash": "hash",
+        "permissions": [
+            "all"
+        ]
+    }
+]
