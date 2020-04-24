@@ -1,15 +1,15 @@
 FROM alpine:3.11.5
 
-LABEL maintainer = "MiguelNdeCarvalho <geral@miguelndecarvalho.pt>" \
-      description = "FiveM + TXAdmin based on Alpine"
+ARG FIVEM_VER="2397-d16cd9e2a657f0e72943ac23b8415e8984fb80df"
 
-RUN apk -U add \
-    git \
-    nodejs \
-    npm && \
-    cd / && \
-    git clone https://github.com/tabarra/txAdmin panel && \
-    cd /panel
+LABEL maintainer = "MiguelNdeCarvalho <geral@miguelndecarvalho.pt>" \
+      description = "FiveM Server based on Alpine" \
+      url = "https://github.com/MiguelNdeCarvalho/docker-fivem" \
+      version = "${FIVEM_VER}"
+
+RUN apk upgrade --no-cache \
+    && apk add --no-cache \
+    git
 
 COPY rootfs /
 
@@ -17,4 +17,4 @@ RUN /bin/sh /setup.sh
 
 CMD ["./start.sh"]
 
-EXPOSE 40120
+EXPOSE 30120 40120
