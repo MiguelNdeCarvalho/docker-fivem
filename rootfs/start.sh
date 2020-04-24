@@ -1,3 +1,3 @@
 #!/bin/sh
-cd /panel
-node src/index.js default
+cd /fivem/server-data/
+/bin/sh /fivem/server/run.sh
