@@ -1,8 +1,5 @@
 #!/bin/sh
 
-echo "Creating default"
-mkdir /fivem
-
 echo "Download required files and move it"
 cd /tmp
 mkdir server
