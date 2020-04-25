@@ -9,6 +9,7 @@ if [ "$(ls -A /fivem/resources/)" ]; then
     echo "Resources folder already there"
 else
     mv /fivem/server-data/* /fivem/resources/
+    rm /fivem/server-data/
 fi
 
 # Start the Server
