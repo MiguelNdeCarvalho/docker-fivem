@@ -1,4 +1,4 @@
-FROM alpine:3.11.6
+FROM alpine:3.13.4
 
 ARG FIVEM_VER="2637-ddc2ad80888aa029858b89de09e76b0f1dd7ad8e"
 
